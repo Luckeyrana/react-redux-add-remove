@@ -14,6 +14,7 @@ class Header extends Component{
                     <li><NavLink activeClassName={'active'} to={"/home"}> Home</NavLink></li>
                     <li><NavLink activeClassName={'active'} to={"/addData"}>Add Data</NavLink></li>
                     <li><NavLink activeClassName={'active'} to={"/information"}>Information</NavLink></li>
+                    <li><NavLink activeClassName={'active'} to={"/contactUs"}>Contact Us</NavLink></li>
                 </ul>
 
             </nav>

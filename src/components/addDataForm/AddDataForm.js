@@ -6,7 +6,8 @@ class AddDataForm extends Component {
         super(props)
 
         this.state = {
-            data: {}
+            data: {},
+            errors:{}
         };
 
         this.handleInput = this.handleInput.bind(this);
@@ -36,9 +37,11 @@ class AddDataForm extends Component {
             <div className={'add-form-data'}>
                 <form onSubmit={this.submitForm}>
                     <input type={"text"} defaultValue={''} name={"name"} placeholder={"Enter name"}
-                           onChange={this.handleInput}/> <br/>
+                           onChange={this.handleInput} required /> <br/>
+                    <div className="errorMsg">{this.state.errors.username}</div>
                     <input  type={"text"} defaultValue={''} name={"department"} placeholder={"Enter department"}
-                           onChange={this.handleInput}/> <br/>
+                           onChange={this.handleInput} required /> <br/>
+                    <div className="errorMsg">{this.state.errors.department}</div>
                     <button  type={"submit"}>Submit</button>
                 </form>
 

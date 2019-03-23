@@ -7,6 +7,7 @@ import Information from "./components/pages/Information";
 import NoMatch from "./components/pages/NoMatch";
 import {Switch, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
+import ContactUs from "./components/addDataForm/ContactUs";
 class App extends Component {
   render() {
       console.log(this.props)
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path={"/home"} component={Home} />
             <Route exact path={"/addData"} component={AddData} />
             <Route exact path={"/information"} component={Information} />
+            <Route exact path={"/contactUs"} component={ContactUs} />
             <Route component={NoMatch} />
         </Switch>
 
